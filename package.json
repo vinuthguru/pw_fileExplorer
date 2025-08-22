@@ -1,0 +1,27 @@
+{
+  "name": "fileexplorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "smoke:dev": "TEST_ENV=dev npx playwright test --grep @smoke",
+    "smoke:qa": "TEST_ENV=qa npx playwright test --grep @smoke",
+    "smoke:prod": "TEST_ENV=prod npx playwright test --grep @smoke",
+    "sanity:dev": "TEST_ENV=dev npx playwright test --grep @sanity",
+    "sanity:qa": "TEST_ENV=qa npx playwright test --grep @sanity",
+    "sanity:prod": "TEST_ENV=prod npx playwright test --grep @sanity",
+    "regression:dev": "TEST_ENV=dev npx playwright test --grep @regression",
+    "regression:qa": "TEST_ENV=qa npx playwright test --grep @regression",
+    "regression:prod": "TEST_ENV=prod npx playwright test --grep @regression"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
