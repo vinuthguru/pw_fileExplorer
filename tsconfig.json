@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ESNext",                          // Modern JS output
+    "module": "CommonJS",                        // Works with Playwright runner
+    "lib": ["ESNext", "DOM"],                    // Allow DOM + modern JS APIs
+    "types": ["node", "playwright"],             // Add Node.js + Playwright typings
+
+    /* Module Resolution */
+    "moduleResolution": "node",                  // Resolve modules like Node
+    "esModuleInterop": true,                     // Interop with CommonJS
+    "resolveJsonModule": true,                   // Allow importing JSON (your folderData.json)
+    "allowSyntheticDefaultImports": true,
+
+    /* Paths & Output */
+    "outDir": "dist",                            // Compiled JS output
+    "rootDir": ".",                              // Root for TS compiler
+
+    /* Strictness (Good practice in automation projects) */
+    "strict": true,                              // Enable all strict checks
+    "noImplicitAny": true,                       // Prevent accidental `any`
+    "strictNullChecks": true,                    // Catch null/undefined issues
+
+    /* Other Handy Flags */
+    "skipLibCheck": true,                        // Faster builds, skip type checks on libs
+    "forceConsistentCasingInFileNames": true     // Prevent casing mismatch bugs (Windows vs Linux)
+  },
+  "include": [
+    "tests/**/*.ts",
+    "pages/**/*.ts",
+    "utils/**/*.ts",
+    "testData/**/*.json"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
